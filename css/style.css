@@ -1,0 +1,38 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+	box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+body {
+	background-color: #141414;
+	color: aliceblue;
+	text-align: center;
+}
+
+.pokemon-info {
+	width: 300px;
+	margin: 5% auto;
+	padding: 1%;
+}
+
+ul {
+	padding: 0;
+	display: flex;
+	justify-content: space-evenly;
+}
+ul li {
+	display: inline;
+	list-style-type: none;
+}
