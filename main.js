@@ -10,6 +10,7 @@ function getFetch() {
 	fetch(url)
 		.then(res => res.json()) // parse response as JSON
 		.then(data => {
+			console.log(data);
 			document.querySelector('h2').textContent = data.name;
 			document.querySelector('#pokeImg1').src = data.sprites.front_default;
 			while (unorderedList.firstChild) unorderedList.removeChild(unorderedList.firstChild);
@@ -20,6 +21,7 @@ function getFetch() {
 				unorderedList.appendChild(listItem);
 			});
 		})
+
 		.catch(err => {
 			console.log(`error ${err}`);
 		});
