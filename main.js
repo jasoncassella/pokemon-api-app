@@ -11,7 +11,9 @@ async function getFetch() {
 		console.log(data);
 		document.querySelector('h2').textContent = data.name;
 		document.querySelector('#pokeImg1').src = data.sprites.front_default;
-		while (unorderedList.firstChild) unorderedList.removeChild(unorderedList.firstChild);
+		while (unorderedList.firstChild) {
+			unorderedList.removeChild(unorderedList.firstChild);
+		}
 		data.types.forEach(type => types.push(type.type.name));
 		types.forEach(type => {
 			const listItem = document.createElement('li');
