@@ -1,13 +1,11 @@
-//Example fetch using pokemonapi.co
 document.querySelector('button').addEventListener('click', getFetch);
 
 async function getFetch() {
+	const poke1 = document.querySelector('#poke1').value;
+	const url = 'https://pokeapi.co/api/v2/pokemon/' + poke1;
+	const types = [];
+	const unorderedList = document.querySelector('ul');
 	try {
-		const poke1 = document.querySelector('#poke1').value;
-		const url = 'https://pokeapi.co/api/v2/pokemon/' + poke1;
-		const types = [];
-		const unorderedList = document.querySelector('ul');
-
 		const res = await fetch(url);
 		const data = await res.json();
 		console.log(data);
